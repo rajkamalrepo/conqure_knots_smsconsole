@@ -1,7 +1,7 @@
 # Conqure Knots UI
 
 A React + Bootstrap console covering the three ways a customer sends SMS through
-Conqure Knots (architecture doc §5/§20):
+Conqure Knots (architecture doc):
 
 1. **Send SMS** — the portal itself: single SMS and bulk SMS, calling the SMS API
    Service directly.
