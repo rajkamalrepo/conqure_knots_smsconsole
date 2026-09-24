@@ -1,0 +1,141 @@
+:root {
+  --ckn-navy: #181246;
+  --ckn-navy-2: #221a5c;
+  --ckn-royal: #5b2ee0;
+  --ckn-blue: #007ced;
+  --ckn-pink: #fb1a97;
+  --ckn-orange: #faa805;
+  --ckn-ink: #1e1b45;
+  --ckn-slate: #635f86;
+  --ckn-bg: #f7f6fb;
+
+  /* Brand: maroon primary, green accent */
+  --ckn-maroon: #6e1423;
+  --ckn-maroon-2: #4a0d18;
+  --ckn-maroon-3: #8c1c2b;
+
+  --ckn-green: #12b76a;
+  --ckn-green-dark: #0e9a5a;
+  --ckn-green-light: #e6f7ee;
+
+  --bs-primary: var(--ckn-maroon);
+  --bs-primary-rgb: 110, 20, 35;
+  --bs-success: var(--ckn-green);
+  --bs-success-rgb: 18, 183, 106;
+}
+
+body {
+  background: var(--ckn-bg);
+  color: var(--ckn-ink);
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+/* --- Navbar (maroon) --- */
+.ckn-navbar {
+  background: linear-gradient(120deg, var(--ckn-maroon-2) 0%, var(--ckn-maroon) 55%, var(--ckn-maroon-3) 100%);
+}
+
+.ckn-brand-logo {
+  height: 34px;
+  width: auto;
+}
+
+/* Active nav link gets a green underline instead of the default bootstrap blue */
+.ckn-nav-active {
+  color: #fff !important;
+  position: relative;
+}
+.ckn-nav-active::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: -6px;
+  height: 2px;
+  background: var(--ckn-green);
+  border-radius: 2px;
+}
+
+.ckn-badge-tenant {
+  background: var(--ckn-green) !important;
+  font-weight: 600;
+}
+
+.ckn-card {
+  border: 1px solid #e6e3f5;
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(24, 18, 70, 0.06);
+}
+
+/* --- Primary action buttons: maroon gradient --- */
+.ckn-gradient-btn {
+  background: linear-gradient(120deg, var(--ckn-maroon-2), var(--ckn-maroon) 55%, var(--ckn-maroon-3));
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.ckn-gradient-btn:hover,
+.ckn-gradient-btn:focus {
+  color: #fff;
+  opacity: 0.92;
+}
+.ckn-gradient-btn:disabled {
+  background: var(--ckn-slate);
+  opacity: 0.6;
+}
+
+/* --- Accent (green): secondary actions, links, success highlights --- */
+.ckn-accent-btn {
+  background: var(--ckn-green);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.ckn-accent-btn:hover,
+.ckn-accent-btn:focus {
+  background: var(--ckn-green-dark);
+  color: #fff;
+}
+
+.ckn-link-accent {
+  color: var(--ckn-green-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+.ckn-link-accent:hover {
+  color: var(--ckn-green);
+  text-decoration: underline;
+}
+
+/* --- Auth pages --- */
+.ckn-auth-shell {
+  min-height: calc(100vh - 88px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: radial-gradient(circle at top right, var(--ckn-green-light) 0%, var(--ckn-bg) 45%);
+}
+.ckn-auth-card {
+  max-width: 420px;
+  width: 100%;
+}
+
+.ckn-mono {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85rem;
+}
+
+.ckn-badge-otp {
+  background: var(--ckn-pink);
+}
+
+code.ckn-curl {
+  display: block;
+  white-space: pre-wrap;
+  background: var(--ckn-navy);
+  color: #d8d2f5;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+}
