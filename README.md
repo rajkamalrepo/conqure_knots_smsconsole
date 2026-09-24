@@ -56,7 +56,7 @@ whenever the API restarts).
 | API Gateway → Verify key | `GET /api/v1/applications/whoami` (demo-only stand-in for APIM's subscription→tenant lookup) |
 | API Gateway → Send | `POST /api/v1/sms/send` (using the resolved tenant) |
 
-## Build for deployment
+## Build for deployment 
 
 ```bash
 npm run build
